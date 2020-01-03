@@ -43,28 +43,28 @@ class QrCode extends Component {
             window.CALLBACK_URL = response.data.callbackUrl;
     
             if(window.TARGETACTION === 'gen') {
-                _this.props.history.push('/gen');
+                _this.props.history.push('/webviewApp/gen');
             } else  if(window.TARGETACTION === 'scanqr') {
-                _this.props.history.push('/scanqr');
+                _this.props.history.push('/webviewApp/scanqr');
             } else if(window.TARGETACTION === 'scanbar') {
-                _this.props.history.push('/scanbar');
+                _this.props.history.push('/webviewApp/scanbar');
             }
         });
     }
 
     goToScanQr() {
         console.log("*** goToScan");
-        this.props.history.push('/scanqr');
+        this.props.history.push('/webviewApp/scanqr');
     }
 
     goToScanBar() {
         console.log("*** goToScan");
-        this.props.history.push('/scanbar');
+        this.props.history.push('/webviewApp/scanbar');
     }
 
     goToGen() {
         console.log("*** goToGen");
-        this.props.history.push('/gen');
+        this.props.history.push('/webviewApp/gen');
     }
 }
 

@@ -5,9 +5,6 @@ import axios from 'axios';
 class QrCode extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            loaded: false
-        };
         this.goToScanBar = this.goToScanBar.bind(this);
         this.goToScanQr = this.goToScanQr.bind(this);
         this.goToGen = this.goToGen.bind(this);
@@ -15,7 +12,7 @@ class QrCode extends Component {
 
     render() {       
         return ( 
-            <div className={this.props.loaded ? 'hide' : 'loading-abs-center'}>
+            <div className="loading-abs-center">
                 <span>Loading...</span>
             </div>
             // <div className="App-toolbar">
@@ -32,10 +29,6 @@ class QrCode extends Component {
     }
 
     componentWillMount() {
-        this.setState({
-            loaded: false
-        });
-
         let urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get("token");
         console.log("*** Parameter ID: " + id);
@@ -49,10 +42,6 @@ class QrCode extends Component {
             window.TARGETACTION = response.data.targetAction;
             window.CALLBACK_URL = response.data.callbackUrl;
     
-            this.setState({
-                loaded: true
-            });
-
             if(window.TARGETACTION === 'gen') {
                 _this.props.history.push('/webviewApp/gen');
             } else  if(window.TARGETACTION === 'scanqr') {

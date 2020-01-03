@@ -58,11 +58,14 @@ class App extends Component {
                         {/* <TitleBar title={this.state.title} /> */}
                         <Router >
                             <div>
-                                <Route exact path="/" component={QrCode} />   
-                                {/* <Route path="/scan" component={Scan} />                   */}
+                                <Route exact path="/" component={QrCode} /> 
                                 <Route path="/scanqr" component={ScanQr} /> 
                                 <Route path="/scanbar" component={ScanBar} /> 
-                                <Route path="/gen" component={Gen} />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                <Route path="/gen" component={Gen} />  
+                                <Route exact path="/webviewApp" component={QrCode} /> 
+                                <Route path="/webviewApp/scanqr" component={ScanQr} /> 
+                                <Route path="/webviewApp/scanbar" component={ScanBar} /> 
+                                <Route path="/webviewApp/gen" component={Gen} />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
                             </div>
                         </Router>
                         {content}

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-docker stop webviewApp
-docker rm webviewApp
+docker stop webviewapp
+docker rm webviewapp
 
 docker run -d \
     --restart=always \
-    --name=webviewApp \
+    --name=webviewapp \
     -p 8891:80 \
-    hysunhe/webviewApp:latest
+    hysunhe/webviewapp:latest

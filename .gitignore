@@ -1,6 +1,7 @@
 **/node_modules/
 **/quaggaJS/
 **/dist/
+**/build/
 **/webviewServer/webviewApp/
 webviewServer/log4js.log
 **/*.log

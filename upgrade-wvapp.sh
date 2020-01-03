@@ -15,6 +15,7 @@ echo "npm install webviewApp"
 cd /home/oracle/hysun-workspace/webviewApp/
 chmod +x *.sh
 npm install
+npm run build
 
 sleep 1
 

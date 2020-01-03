@@ -1,0 +1,228 @@
+.App {
+    color: black;
+    background-color: white;
+    overflow: hidden;
+}
+
+.App-header {
+    text-align: center;
+    background-color: #42A5F5;
+    padding: 10px;
+    /*position: fixed;*/
+    /*transform: translateX(-10%);*/
+    width: 100%;
+}
+
+.App-title {
+    color: white;
+    font-size: 1.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0px;
+}
+
+.App-toolbar {
+    font-size: large;
+    /*position: fixed;*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 41px);
+   /* border-bottom: 0.5px solid #AAAAAA; */
+}
+
+.App-toolbar-label {
+    margin-left: 5px !important;
+    font-size: 0.8rem !important;
+}
+
+.App-toolbar-field {
+    margin: 5px !important;
+    border: 0.5px solid #AAAAAA !important;
+    font-size: 0.75rem !important;
+}
+
+.App-toolbar-button {
+    background-color: #04BE02;
+    color: #FFF;
+    font-size: 1.25rem !important;
+    width:  300px;
+    line-height:3;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer !important;
+}
+
+.normal-button {
+    background-color: #04BE02;
+    color: #FFF;
+    font-size: 1.25rem !important;
+    max-width:  400px;
+    width:100%;
+    line-height:2;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer !important;
+}
+
+.App-domain-list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+    top: 160px;
+    height: stretch;
+    width: 100%;
+}
+
+.App-domain-list-ul {
+    list-style-type: none;
+    padding: 5px;
+    margin-top: 0px;
+}
+
+.App-domain-list-li {
+    height: 7.0rem;
+    margin-bottom: 30px;
+}
+
+.App-domain-item {
+    border-bottom: 0.5px solid lightgray;
+    padding: 5px 0px 5px 5px;
+}
+
+.App-domain-item-select {
+    display: inline-flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px #03A9F4;
+    position: relative;
+    top: -43px;
+    text-align: center;
+    margin-right: 7px;
+    transition: border-color .2s easy,box-shadow .2s easy;
+}
+
+.App-domain-item-checkmark {
+    background-color: #2196F3;
+    background-image:url(check-mark.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.App-domain-item-body {
+    display: inline-block;
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.App-domain-item-title {
+    font-size: 0.90rem;
+    font-weight: bold;
+    margin: 5px;
+    white-space: initial;
+    max-height: 3.0rem;
+    overflow-y: hidden;
+}
+
+.App-domain-item-subtitle {
+    font-size: 0.75rem;
+    color: #42A5F5;
+    margin: 5px;
+    /*text-overflow: ellipsis;*/
+}
+
+.App-domain-item-text {
+    font-size: 0.75rem;
+    color: #757575;
+    margin: 5px;
+    /*text-overflow: ellipsis;*/
+}
+
+.App-domain-item-highlight-small {
+    font-size: 0.70rem;
+    color: #81C784;
+    margin: 5px;
+    /*text-overflow: ellipsis;*/
+}
+
+.hide {
+    display: none;
+}
+
+.QrCode-Scan-Region {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:20px;
+}
+
+.QrCode-Square {
+/*    border: 1px solid gray; */
+}
+
+.loading-abs-center {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 640px;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  
+  #interactive.viewport {
+    width: 640px;
+    height: 480px;
+  }
+  
+  
+  #interactive.viewport canvas, video {
+    float: left;
+    width: 640px;
+    height: 480px;
+  }
+  
+  #interactive.viewport canvas.drawingBuffer, video.drawingBuffer {
+    margin-left: -640px;
+  }
+
+  @media (max-width: 603px) {
+    #container {
+      width: 300px;
+      margin: 10px auto;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  
+    #container form.voucher-form input.voucher-code {
+      width: 180px;
+    }
+
+    #interactive.viewport {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+      }
+    
+      #interactive.viewport canvas, video {
+        margin-top: -50px;
+        width: 300px;
+        height: 400px;
+      }
+    
+      #interactive.viewport canvas.drawingBuffer, video.drawingBuffer {
+        margin-left: -300px;
+      }
+    
+  }

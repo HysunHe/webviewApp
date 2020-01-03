@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+docker stop webviewApp
+docker rm webviewApp
+
 docker run -d \
     --restart=always \
-    --name=odaqr-webview \
+    --name=webviewApp \
     -p 8891:80 \
-    hysunhe/odaqr-webview:latest
+    hysunhe/webviewApp:latest

@@ -2,5 +2,5 @@
 
 TAG=`date '+%Y-%m-%d-%H-%M-%S'`
 
-docker build . -t hysunhe/odaqr-webview:${TAG}
-docker tag hysunhe/odaqr-webview:${TAG}   hysunhe/odaqr-webview:latest
+docker build . -t hysunhe/webviewApp:${TAG}
+docker tag hysunhe/webviewApp:${TAG}   hysunhe/webviewApp:latest

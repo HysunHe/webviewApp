@@ -12,19 +12,19 @@ class QrCode extends Component {
 
     render() {       
         return ( 
-            // <div className="loading-abs-center">
-            //     <span>Loading...</span>
-            // </div>
-            <div className="App-toolbar">
-                <button className="App-toolbar-button"
-                    onClick={this.goToScanQr}>Scan QR Code</button>
-
-                <button className="App-toolbar-button"
-                    onClick={this.goToScanBar}>Scan Bar Code</button>
-
-                <button className="App-toolbar-button"
-                    onClick={this.goToGen}>Present Pay Code</button>   
+            <div className="loading-abs-center">
+                <span>Loading...</span>
             </div>
+            // <div className="App-toolbar">
+            //     <button className="App-toolbar-button"
+            //         onClick={this.goToScanQr}>Scan QR Code</button>
+
+            //     <button className="App-toolbar-button"
+            //         onClick={this.goToScanBar}>Scan Bar Code</button>
+
+            //     <button className="App-toolbar-button"
+            //         onClick={this.goToGen}>Present Pay Code</button>   
+            // </div>
         ); 
     }
 

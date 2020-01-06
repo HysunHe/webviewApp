@@ -65,7 +65,7 @@ class Gen extends Component {
                     <div className="BarCode-Square" id="barresult" style={{marginTop:"20px"}} > 
                         <svg id="barcode"></svg>
                     </div>
-                    <button className={this.state.qrContentLoaded ? "normal-button" : "hide"} onClick={this.completedPay}>Done</button>  
+                    <button className={this.state.qrContentLoaded ? "normal-button-largespace" : "hide"} onClick={this.completedPay}>Done</button>  
                 </div>
             );
         }

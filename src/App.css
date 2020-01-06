@@ -68,6 +68,18 @@
     cursor: pointer !important;
 }
 
+.normal-button-largespace {
+    background-color: #04BE02;
+    color: #FFF;
+    font-size: 1.25rem !important;
+    max-width:  400px;
+    width:100%;
+    line-height:2;
+    font-weight: bold;
+    margin-top: 40px;
+    cursor: pointer !important;
+}
+
 .App-domain-list {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -160,7 +172,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin:20px;
+    margin:0 20px 20px 20px;
 }
 
 .QrCode-Square {

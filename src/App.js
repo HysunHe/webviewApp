@@ -62,7 +62,7 @@ class App extends Component {
                                 <Route path="/scanqr" component={ScanQr} /> 
                                 <Route path="/scanbar" component={ScanBar} /> 
                                 <Route path="/gen" component={Gen} />  
-                                <Route path="/webviewApp" component={QrCode} /> 
+                                <Route exact path="/webviewApp" component={QrCode} /> 
                                 <Route path="/webviewApp/scanqr" component={ScanQr} /> 
                                 <Route path="/webviewApp/scanbar" component={ScanBar} /> 
                                 <Route path="/webviewApp/gen" component={Gen} />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

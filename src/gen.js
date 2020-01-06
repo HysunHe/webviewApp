@@ -112,11 +112,11 @@ class Gen extends Component {
         console.log("*********** Tx Info: ", this.state.tx);
         if(this.state.tx !== null) {
             let doneTx = this.state.tx;
-            payload.txid = doneTx.glnTxNo;
-            payload.amount = doneTx.txAmt;
-            payload.datetime = doneTx.approveDateTime;
-            payload.currencyCode = doneTx.currencyCode;
-            payload.payCode = doneTx.payCode;
+            // payload.txid = doneTx.glnTxNo;
+            payload.amount = doneTx.txAmt || '-';
+            payload.datetime = doneTx.approveDateTime || '-';
+            payload.currencyCode = doneTx.currencyCode || '-';
+            payload.payCode = doneTx.payCode || '-';
         }
          postback(payload, null, null);
          this.setState({ 

@@ -69,7 +69,7 @@
 }
 
 .normal-button-largespace {
-    background-color: #04BE02;
+    /* background-color: #04BE02; */
     color: #FFF;
     font-size: 1.25rem !important;
     max-width:  400px;

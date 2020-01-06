@@ -59,13 +59,17 @@ class Gen extends Component {
                 </div>
             );
         } else {
+            let bgcolor = "#04BE02", btnTxt = "Done";
+            if(!this.state.tx) {
+                bgcolor = "#aaaaaa", btnTxt = "Wating for completion"
+            }
             codeSection = (
                 <div className="QrCode-Scan-Region">
                     <div className="QrCode-Square" id="result" style={{marginTop:"0px"}} > </div>
                     <div className="BarCode-Square" id="barresult" style={{marginTop:"20px"}} > 
                         <svg id="barcode"></svg>
                     </div>
-                    <button className={this.state.qrContentLoaded ? "normal-button-largespace" : "hide"} onClick={this.completedPay}>Done</button>  
+            <button disabled={!this.state.tx} style={{backgroundColor: bgcolor}} className={this.state.qrContentLoaded ? "normal-button-largespace" : "hide"} onClick={this.completedPay}>{btnTxt}</button>  
                 </div>
             );
         }
@@ -96,6 +100,7 @@ class Gen extends Component {
     }
 
     completedPay() {
+        console.log("********* completedPay ***********");
         const d = new Date();
         const payload =  {
             "txid": "T" + (new Date()).getMinutes() + (new Date()).getHours() + (new Date()).getFullYear(),
@@ -104,11 +109,14 @@ class Gen extends Component {
             "amount":   (new Date()).getMilliseconds(),
             "datetime":  [d.getFullYear(), d.getMonth()+1, d.getDate()].join('-')+' '+ [d.getHours(), d.getMinutes(), d.getSeconds()].join(':')
         }
+        console.log("*********** Tx Info: ", this.state.tx);
         if(this.state.tx !== null) {
             let doneTx = this.state.tx;
             payload.txid = doneTx.glnTxNo;
             payload.amount = doneTx.txAmt;
             payload.datetime = doneTx.approveDateTime;
+            payload.currencyCode = doneTx.currencyCode;
+            payload.payCode = doneTx.payCode;
         }
          postback(payload, null, null);
          this.setState({ 

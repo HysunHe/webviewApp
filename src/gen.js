@@ -117,6 +117,8 @@ class Gen extends Component {
             payload.datetime = doneTx.approveDateTime || '-';
             payload.currencyCode = doneTx.currencyCode || '-';
             payload.payCode = doneTx.payCode || '-';
+            payload.paymentNo = doneTx.paymentNo || '-';
+            payload.txExRate = doneTx.txExRate || '-';
         }
          postback(payload, null, null);
          this.setState({ 

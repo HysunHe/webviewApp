@@ -115,6 +115,8 @@ class Gen extends Component {
             // payload.txid = doneTx.glnTxNo;
             payload.amount = doneTx.txAmt || '-';
             payload.datetime = doneTx.approveDateTime || '-';
+            payload.date = doneTx.approveDate || '-';
+            payload.time = doneTx.approveTime || '-';
             payload.txCur = doneTx.txCur || '-';
             payload.payCode = doneTx.payCode || '-';
             payload.paymentNo = doneTx.paymentNo || '-';
